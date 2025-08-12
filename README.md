@@ -1,3 +1,7 @@
+ALUMNO: Franco Agustin Parra
+CARRERA: Ingenieria Informatica
+Trabajo: Tateti 
+
 Proyecto Tateti - Arquitectura por Capas y Testing
 Este proyecto de Tateti en Python está diseñado siguiendo una arquitectura en capas como la que vimos en clase, que separa claramente la interfaz, las reglas de negocio y el juego, para lograr un código modular, mantenible y fácil de probar.
 
