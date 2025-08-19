@@ -50,4 +50,4 @@ Esto tiene varias ventajas:
 
 ## Cómo ejecutar
 ```bash
-python cli.py
+python3 cli.py
