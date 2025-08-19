@@ -1,23 +1,53 @@
-ALUMNO: Franco Agustin Parra
-CARRERA: Ingenieria Informatica
-Trabajo: Tateti 
+# Proyecto Tatetí
 
-Proyecto Tateti - Arquitectura por Capas y Testing
-Este proyecto de Tateti en Python está diseñado siguiendo una arquitectura en capas como la que vimos en clase, que separa claramente la interfaz, las reglas de negocio y el juego, para lograr un código modular, mantenible y fácil de probar.
+**Alumno:** Franco Agustín Parra  
+**Carrera:** Ingeniería Informática  
+**Trabajo:** Tatetí  
 
-Capas y responsabilidades
-Interfaz (cli.py):
-Es la capa encargada de mostrar información al usuario y recibir sus inputs. No contiene reglas del juego ni lógica, solo maneja la interaccion.
+---
 
-Reglas de negocio (modelo):
-Aquí se definen las reglas del juego, como que siempre arrancan las X. Incluye:
+## Descripción
+Este proyecto de **Tatetí en Python** está diseñado siguiendo una **arquitectura en capas**, como la vista en clase.  
+La idea es separar claramente la interfaz, las reglas de negocio y la lógica del juego, para lograr un código **modular, mantenible y fácil de probar**.
 
-tablero.py: Representa el tablero, valida posiciones, actualiza el estado y detecta ganador o empate. No conoce detalles del jugador ni la interfaz.
+---
 
-jugador.py: Representa a un jugador, guarda su nombre y símbolo, y elige movimientos válidos (puede ser humano o CPU). No sabe sobre turnos ni estado general.
+## Arquitectura por Capas
 
-Juego (tateti.py):
-Esta capa maneja el juego: coordina los turnos, solicita jugadas a los jugadores, actualiza el tablero y determina el fin de la partida. Es el “cerebro” que integra las reglas con la interfaz.
+### 1. Interfaz (`cli.py`)
+- Muestra información al usuario y recibe sus inputs.
+- No contiene reglas del juego ni lógica.
+- Solo maneja la interacción con la consola.
 
+### 2. Reglas de negocio (modelo)
+Aquí se definen las reglas del juego, por ejemplo que siempre arranca **X**.
 
-Aplique tests a cada modulo por separados porque como vimos en clases eso tiene ciertas ventajas, como reconocer en donde esta el error, si hiciese un solo test al proyecto completo y falla, no sabria donde esta el error, tambien podemos modificar modulos individualmente sin afectar a otros.
+- **`tablero.py`**:  
+  Representa el tablero, valida posiciones, actualiza el estado y detecta ganador o empate.  
+  No conoce detalles del jugador ni de la interfaz.
+
+- **`jugador.py`**:  
+  Representa a un jugador, guarda su nombre y símbolo, y elige movimientos válidos (puede ser humano o CPU).  
+  No sabe sobre turnos ni estado general.
+
+### 3. Juego (`tateti.py`)
+- Coordina los turnos.  
+- Solicita jugadas a los jugadores.  
+- Actualiza el tablero.  
+- Determina el fin de la partida.  
+Es el **“cerebro”** que integra las reglas con la interfaz.
+
+---
+
+## Testing
+Se aplicaron **tests unitarios** a cada módulo por separado.  
+Esto tiene varias ventajas:
+- Permite reconocer en qué parte del código está el error.  
+- Si se testeara todo el proyecto junto y falla, no se sabría dónde ocurrió el problema.  
+- Se pueden modificar módulos individuales sin afectar a los demás.
+
+---
+
+## Cómo ejecutar
+```bash
+python cli.py
